@@ -1,0 +1,621 @@
+:root {
+    --demag-navy: #002D5A;
+    --demag-orange: #FF6600;
+    --steel-gray: #E0E5E9;
+    --text-dark: #333333;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+/* Header & Navigation */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--white);
+    border-bottom: 3px solid var(--demag-navy);
+}
+
+.logo-container {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--demag-navy);
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.partner-badge {
+    font-size: 0.9rem;
+    color: #666;
+    border-left: 2px solid var(--demag-orange);
+    padding-left: 10px;
+    padding-top:4px;
+    padding-bottom:4px;
+}
+
+/* Navigation Container */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--demag-navy); /* Adjust this if your header background requires white text */
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; /* Reserves space so the layout doesn't jump */
+    transition: border-bottom-color 0.3s ease;
+}
+
+/* Add the themed orange line on hover and active, keeping text color unchanged */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    border-bottom-color: var(--demag-orange);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--demag-navy);
+    color: var(--white);
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+    /* To add a background image later: background: linear-gradient(rgba(0,45,90,0.8), rgba(0,45,90,0.8)), url('crane-bg.jpg') center/cover; */
+}
+
+.hero-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--steel-gray);
+}
+
+.btn-primary {
+    background-color: var(--demag-orange);
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Partner & Grid Section */
+.partner-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--steel-gray);
+}
+
+.partner-section h3 {
+    color: var(--demag-navy);
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 40px 20px;
+    border-bottom: 4px solid var(--demag-orange);
+    font-weight: bold;
+    color: var(--demag-navy);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--demag-navy);
+    color: var(--steel-gray);
+}
+/* Internal Page Headers */
+.page-header {
+    background-color: var(--demag-navy);
+    color: var(--white);
+    padding: 60px 5%;
+    text-align: center;
+    border-bottom: 4px solid var(--demag-orange);
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--steel-gray);
+    font-size: 1.2rem;
+}
+
+/* About Us Layout */
+.content-section {
+    padding: 60px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-statement, .leadership-bio {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-section h3 {
+    color: var(--demag-orange);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--steel-gray);
+    padding-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.leadership-bio strong {
+    color: var(--demag-navy);
+}
+/* Contact Page Layout */
+.contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.contact-form-container {
+    flex: 3;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 4px;
+    border-top: 4px solid var(--demag-orange);
+}
+
+.contact-location-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-location-container h3, 
+.contact-form-container h3 {
+    color: var(--demag-navy);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Form Styles */
+.hebener-form .form-group {
+    margin-bottom: 20px;
+}
+
+.hebener-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--steel-gray);
+}
+
+.hebener-form input,
+.hebener-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.hebener-form input:focus,
+.hebener-form textarea:focus {
+    outline: none;
+    border-color: var(--demag-navy);
+    box-shadow: 0 0 5px rgba(0, 48, 86, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--demag-navy);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--demag-orange);
+}
+
+/* Location & Maps */
+.company-address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.company-address a {
+    color: var(--demag-orange);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.qr-code-box {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.qr-image {
+    margin: 10px 0;
+    border: 5px solid white;
+    border-radius: 4px;
+}
+
+.map-link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--demag-navy);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid var(--demag-navy);
+}
+
+.map-link-btn:hover {
+    color: var(--demag-orange);
+    border-bottom-color: var(--demag-orange);
+}
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--demag-orange);
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-content h3 {
+    color: var(--demag-navy);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.product-content p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Components Section Layout */
+.components-section {
+    background-color: #f4f6f8;
+    border-radius: 4px;
+    padding: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    border-left: 5px solid var(--demag-navy);
+}
+
+.components-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.components-text h2 {
+    color: var(--demag-navy);
+    margin-top: 0;
+}
+
+.components-gallery {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.component-img {
+    height: 160px;
+    object-fit: contain;
+    background: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+/* Engineering Page Intro Layout */
+.engineering-intro {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-image-wrapper {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.eng-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--demag-orange);
+}
+
+.intro-text-box {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sub-tag {
+    color: var(--demag-orange);
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.intro-text-box h2 {
+    color: var(--demag-navy);
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.intro-text-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Engineering Technical Process Section */
+.capabilities-section {
+    background-color: #f4f6f8;
+    padding: 60px 5%;
+    border-top: 1px solid #e0e0e0;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--demag-navy);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.capability-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 4px;
+    border-top: 3px solid var(--steel-gray);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--demag-orange);
+}
+
+.cap-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.capability-card h3 {
+    color: var(--demag-navy);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.capability-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HEBENER Lifting Solutions - Crane Services, AMC, Repair, Spare Parts, and Load Testing in the UAE.">
+    <title>Services | HEBENER Lifting Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <h1 class="logo">HEBENER</h1>
+            <span class="partner-badge">PARTNER OF <strong>DEMAG</strong></span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="products.html">Products & services</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Comprehensive Crane Services</h2>
+            <p>Lifetime support, maintenance, and modernization for industrial lifting systems</p>
+        </section>
+
+        <section class="content-section">
+            <div class="services-grid">
+                
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="consultancy.jpg" alt="Lifetime Analysis and Consultancy">
+                    <div class="service-content">
+                        <h3>Lifetime Analysis & Consultancy</h3>
+                        <p>Comprehensive analysis of crane lifecycle, performance optimization, and expert consultancy services to maximize your equipment investment.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="amc-services.jpg" alt="AMC Services">
+                    <div class="service-content">
+                        <h3>AMC Services</h3>
+                        <p>Annual Maintenance Contract services ensuring your cranes operate at peak efficiency with scheduled preventive maintenance and rigorous inspections.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="repair.jpg" alt="Repair and Modernization">
+                    <div class="service-content">
+                        <h3>Repair & Modernization</h3>
+                        <p>Complete repair services and modernization solutions to extend equipment life and upgrade older systems with the latest drive and control technology.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <img src="spare-parts.jpg" alt="Spare Parts for Cranes">
+                    <div class="service-content">
+                        <h3>Spare Parts for Cranes</h3>
+                        <p>Genuine spare parts and OEM components readily available to minimize downtime and ensure optimal crane performance across all duty cycles.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <img src="erection.jpg" alt="Erection and Commissioning">
+                    <div class="service-content">
+                        <h3>Erection & Commissioning</h3>
+                        <p>Professional installation, erection, and commissioning services by experienced technicians ensuring proper mechanical setup and electrical operation.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <img src="load-testing.jpg" alt="Load Testing and Training">
+                    <div class="service-content">
+                        <h3>Load Testing & Training</h3>
+                        <p>Comprehensive load testing services to verify crane capacity and safety compliance, along with expert operator training programs and safety courses.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HEBENER Lifting Solutions LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
