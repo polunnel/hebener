@@ -95,6 +95,8 @@ form.addEventListener('submit', function(e) {
             if (response.status == 200) {
                 result.style.color = "green";
                 result.textContent = "Inquiry sent successfully! We will get back to you shortly.";
+                
+                // Explicitly wipe all form inputs clean here
                 form.reset();
             } else {
                 result.style.color = "red";
