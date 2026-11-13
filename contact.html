@@ -36,7 +36,13 @@
             <!-- Contact Form -->
             <div class="contact-form-container">
                 <h3>Send an Inquiry</h3>
-                <form action="#" method="POST" class="hebener-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="hebener-form">
+                    
+                    <!-- Web3Forms Hidden Configuration Fields -->
+                    <input type="hidden" name="access_key" value="5a883976-5d16-4545-91e9-e99eab29f385">
+                    <input type="hidden" name="subject" value="New Inquiry from hebener.ae Website">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your name">
