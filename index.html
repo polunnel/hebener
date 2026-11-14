@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HEBENER Lifting Equipment - Official OEM Partner in Abu Dhabi">
-    <title>HEBENER Lifting Equipment LLC | OEM Partner</title>
+    <title>HEBENER LIFTING EQUIPMENT LLC | OEM Partner</title>
     <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "IndustrialGoodsCompany",
-  "name": "HEBENER Lifting Solutions LLC",
+  "name": "HEBENER LIFTING EQUIPMENT LLC",
   "alternateName": "Hebener Cranes",
   "url": "https://www.hebener.ae",
   "logo": "https://www.hebener.ae/favicon.png",
@@ -52,13 +52,6 @@
           "@type": "Product",
           "name": "Wire Rope and Chain Hoists"
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Demag Material Handling Systems"
-        }
       }
     ]
   }
@@ -89,9 +82,122 @@
     </header>
 
     <main>
+        <style>
+            .hero {
+                position: relative;
+                background-color: #012143; 
+                
+                /* 
+                   Layer 1: Gradient starts solid navy up to 40%, then smoothly fades out by 65% for a natural blend.
+                   Layer 2: The landing.jpg image set to the right. 
+                */
+                background-image: 
+                    linear-gradient(to right, #012143 40%, rgba(1, 33, 67, 0) 65%), 
+                    url('landing.jpg');
+                
+                background-position: left center, right center;
+                background-repeat: no-repeat, no-repeat;
+                
+                /* 
+                   Image is now 60% wide, bleeding 10% past the center to sit beautifully under the fading gradient. 
+                */
+                background-size: 100% 100%, 60% auto;
+                
+                color: #ffffff;
+                padding: 100px 10%; 
+                display: flex;
+                align-items: center;
+                min-height: 500px; 
+            }
+
+            .hero-content {
+                max-width: 650px; 
+                z-index: 2;
+                position: relative;
+            }
+
+            .hero h3 {
+                color: #ff6600; 
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+
+            .hero p {
+                font-size: 2.2rem; 
+                font-weight: 800;
+                line-height: 1.2;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+
+            .hero-actions {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .hero .btn-primary {
+                background-color: #ff6600;
+                border: 2px solid #ff6600;
+                color: white;
+                padding: 12px 28px;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 4px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+
+            .hero .btn-primary:hover {
+                background-color: #e05500;
+                border-color: #e05500;
+            }
+
+            .hero .btn-secondary {
+                background-color: transparent;
+                border: 2px solid #ffffff;
+                color: #ffffff;
+                padding: 12px 28px;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 4px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .hero .btn-secondary:hover {
+                background-color: #ffffff;
+                color: #012143; 
+            }
+
+            @media (max-width: 768px) {
+                .hero {
+                    padding: 60px 5%;
+                    min-height: auto;
+                    background-image: 
+                        linear-gradient(rgba(1, 33, 67, 0.85) 0%, rgba(1, 33, 67, 0.85) 100%), 
+                        url('landing.jpg');
+                    background-position: center, center;
+                    background-size: 100% 100%, 100% auto;
+                }
+                .hero p {
+                    font-size: 1.8rem;
+                }
+                .hero-actions {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .hero .btn-primary, .hero .btn-secondary {
+                    text-align: center;
+                }
+            }
+        </style>
+
         <section class="hero">
             <div class="hero-content">
-                <h3>HEBENER Lifting Equipment LLC</h3>
+                <h3>HEBENER LIFTING EQUIPMENT LLC</h3>
                 <p>Precision-Engineered EOT Cranes, Hoists, and Heavy Lifting Systems</p>
                 <div class="hero-actions">
                     <a href="products.html" class="btn-primary">Explore Our Cranes</a>
@@ -103,7 +209,6 @@
         <section class="partner-section">
             <h3> Industrial Crane Engineering & Authorized Distributor</h3>
             <div class="product-grid">
-                <!-- Placeholder for the 4 product cards shown in the mockup -->
                 <div class="card">Overhead Cranes</div>
                 <div class="card">KBK Light Crane Systems</div>
                 <div class="card">Industrial Drives & Wheels</div>
@@ -113,7 +218,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 HEBENER Lifting Equipment LLC. All rights reserved.</p>
+        <p>&copy; 2026 HEBENER LIFTING EQUIPMENT LLC. All rights reserved.</p>
     </footer>
 <script>
 fetch('https://api.counterapi.dev/v1/hebener/visits/up')
