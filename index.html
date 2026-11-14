@@ -88,26 +88,23 @@
                 background-color: #012143; 
                 
                 /* 
-                   Layer 1: Gradient starts solid navy up to 40%, then smoothly fades out by 65% for a natural blend.
+                   Layer 1: Gradient stays solid navy exactly to the 50% mark, 
+                            then gradually fades out to clear by the 85% mark.
                    Layer 2: The landing.jpg image set to the right. 
                 */
                 background-image: 
-                    linear-gradient(to right, #012143 40%, rgba(1, 33, 67, 0) 65%), 
+                    linear-gradient(to right, #012143 50%, rgba(1, 33, 67, 0) 85%), 
                     url('landing.jpg');
                 
                 background-position: left center, right center;
                 background-repeat: no-repeat, no-repeat;
-                
-                /* 
-                   Image is now 60% wide, bleeding 10% past the center to sit beautifully under the fading gradient. 
-                */
                 background-size: 100% 100%, 60% auto;
                 
                 color: #ffffff;
-                padding: 100px 10%; 
+                padding: 70px 10%; 
                 display: flex;
                 align-items: center;
-                min-height: 500px; 
+                min-height: 400px; 
             }
 
             .hero-content {
@@ -174,7 +171,7 @@
 
             @media (max-width: 768px) {
                 .hero {
-                    padding: 60px 5%;
+                    padding: 50px 5%;
                     min-height: auto;
                     background-image: 
                         linear-gradient(rgba(1, 33, 67, 0.85) 0%, rgba(1, 33, 67, 0.85) 100%), 
